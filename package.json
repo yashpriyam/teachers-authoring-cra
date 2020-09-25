@@ -2,7 +2,7 @@
   "name": "curriculum-auth-tool",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yashpriyam.github.io/teachers-authoring-cra/",
+  "homepage": "https://toddle-tool.netlify.app/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
