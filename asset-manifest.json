@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/teachers-authoring-cra/static/css/main.27fd15f6.chunk.css",
+    "main.js": "/teachers-authoring-cra/static/js/main.df25d8e3.chunk.js",
+    "main.js.map": "/teachers-authoring-cra/static/js/main.df25d8e3.chunk.js.map",
+    "runtime-main.js": "/teachers-authoring-cra/static/js/runtime-main.f375e656.js",
+    "runtime-main.js.map": "/teachers-authoring-cra/static/js/runtime-main.f375e656.js.map",
+    "static/js/2.0abc535e.chunk.js": "/teachers-authoring-cra/static/js/2.0abc535e.chunk.js",
+    "static/js/2.0abc535e.chunk.js.map": "/teachers-authoring-cra/static/js/2.0abc535e.chunk.js.map",
+    "index.html": "/teachers-authoring-cra/index.html",
+    "precache-manifest.9300461dde6bf6936fc825e7b7ee2280.js": "/teachers-authoring-cra/precache-manifest.9300461dde6bf6936fc825e7b7ee2280.js",
+    "service-worker.js": "/teachers-authoring-cra/service-worker.js",
+    "static/css/main.27fd15f6.chunk.css.map": "/teachers-authoring-cra/static/css/main.27fd15f6.chunk.css.map",
+    "static/js/2.0abc535e.chunk.js.LICENSE.txt": "/teachers-authoring-cra/static/js/2.0abc535e.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/teachers-authoring-cra/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f375e656.js",
+    "static/js/2.0abc535e.chunk.js",
+    "static/css/main.27fd15f6.chunk.css",
+    "static/js/main.df25d8e3.chunk.js"
+  ]
+}
