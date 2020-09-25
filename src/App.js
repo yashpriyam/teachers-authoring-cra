@@ -7,11 +7,10 @@ function App() {
   const [user, setUser] = useState("")
 
   useEffect(() => {
-    const unsubscribeFromAuth = auth.onAuthStateChanged((userAuth) => {
+    auth.onAuthStateChanged(userAuth => {
       setUser(userAuth)
+      console.log(userAuth);
     })
-
-    return unsubscribeFromAuth()
   }, [user])
 
   return (
