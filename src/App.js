@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { Switch, Route, BrowserRouter } from "react-router-dom"
 import LogInButton from "./user/loginButton"
-import LogOutButton from "./user/logoutButton"
+import { AppStateProvider } from './appState/globalState.context'
+import HomePage from './homepage/homePage'
 import { auth } from "./firebase/firebase.utils"
 
 import "./App.css"
@@ -23,7 +24,12 @@ function App() {
           <Route
             exact
             path="/"
-            render={() => (user ? <LogOutButton /> : <LogInButton />)}
+            render={() => (user
+              ? (
+                <AppStateProvider>
+                  <HomePage />
+                </AppStateProvider>
+              ) : <LogInButton />)}
           />
         </Switch>
       </BrowserRouter>
