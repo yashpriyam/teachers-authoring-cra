@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react"
-import { signInWithGoogle, auth } from "./firebase/firebase.utils"
+import { Switch, Route, BrowserRouter } from "react-router-dom"
+import LogInButton from "./user/loginButton"
+import LogOutButton from "./user/logoutButton"
+import { auth } from "./firebase/firebase.utils"
 
 import "./App.css"
 
@@ -7,31 +10,23 @@ function App() {
   const [user, setUser] = useState("")
 
   useEffect(() => {
-    auth.onAuthStateChanged(userAuth => {
+    auth.onAuthStateChanged((userAuth) => {
       setUser(userAuth)
-      console.log(userAuth);
+      console.log(userAuth)
     })
   }, [user])
 
   return (
     <div className="App">
-      {user ? (
-        <button
-          type="button"
-          className="sign-out-btn"
-          onClick={() => auth.signOut()}
-        >
-          SignOut
-        </button>
-      ) : (
-        <button
-          type="button"
-          className="sign-in-btn"
-          onClick={signInWithGoogle}
-        >
-          SignInWithGoogle
-        </button>
-      )}
+      <BrowserRouter>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => (user ? <LogOutButton /> : <LogInButton />)}
+          />
+        </Switch>
+      </BrowserRouter>
     </div>
   )
 }
