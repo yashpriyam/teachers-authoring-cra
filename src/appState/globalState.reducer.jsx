@@ -1,6 +1,3 @@
-import React from 'react'
-
-
 export const appState = []
 
 export const reducer = (state, action) => {
