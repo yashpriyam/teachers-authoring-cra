@@ -3,6 +3,7 @@ import { AppStateContext } from '../appState/globalState.context'
 import LeftIndenter from '../leftindenter/leftIndenter'
 import RightIndenter from '../rightindenter/rightIndenter'
 import DeleteTask from '../deletetask/deleteTask'
+import DragDropTasks from '../movetask/moveTask'
 import './taskViewer.style.css'
 
 const TaskViewer = () => {
@@ -19,23 +20,25 @@ const TaskViewer = () => {
                 return null
         }
     }
+
     return (
         <div>
             {appState.map((task, ind) => {
                 return (
                     <div key={task.value}>
-                        <LeftIndenter indPos={ind}/>
-                        <RightIndenter indPos={ind}/>
-                        <DeleteTask indPos={ind} />
-                        <div
-                            className={indentLevel(task)}
-                        >
-                            <input
-                            value={task.value}
-                            disabled
-                            />
-                        </div>
-                        <hr></hr>
+                        <DragDropTasks indPos={ind}>
+                            <LeftIndenter indPos={ind}/>
+                            <RightIndenter indPos={ind}/>
+                            <DeleteTask indPos={ind} />
+                            <div
+                                className={indentLevel(task)}
+                            >
+                                <input
+                                value={task.value}
+                                disabled
+                                />
+                            </div>
+                        </DragDropTasks>
                     </div>
                 )
             })}

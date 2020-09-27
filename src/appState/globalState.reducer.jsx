@@ -17,6 +17,9 @@ export const reducer = (state, action) => {
         case 'deleteTask':
             state = action.value
             return state
+        case 'moveTask':
+            state = action.value
+            return state
         default:
             console.log('some error occurred')
     }
