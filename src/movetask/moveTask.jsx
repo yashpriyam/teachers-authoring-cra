@@ -5,7 +5,9 @@ import { faExpandArrowsAlt } from '@fortawesome/free-solid-svg-icons'
 
 const DragDropTasks = (props) => {
     const { children, indPos } = props
-    const [ appState, dispatch ] = useContext(AppStateContext)
+    const { stateAndDispatcher } = useContext(AppStateContext)
+    const [ appState, dispatch ] = stateAndDispatcher
+    
     let updatedState = [...appState]
     let task = updatedState[indPos]
 

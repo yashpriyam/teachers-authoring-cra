@@ -3,12 +3,15 @@ import { AppStateContext } from '../appState/globalState.context'
 
 
 const DownloadFile = () => {
-    const [ appState ] = useContext(AppStateContext)
+    
+    const { stateAndDispatcher, pageTitleDispatcher } = useContext(AppStateContext)
+    const [ appState ] = stateAndDispatcher
+    const [ pageTitle ] = pageTitleDispatcher
+
 
     const downloadFile = async () => {
-        console.log(appState.length);
         if (appState.length === 0) return Error('No data to download')
-        const fileName = "file";
+        const fileName = pageTitle || 'file';
         const json = JSON.stringify(appState);
         const blob = new Blob([json],{type:'application/json'});
         const href = URL.createObjectURL(blob);

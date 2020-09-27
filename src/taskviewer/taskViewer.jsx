@@ -7,7 +7,9 @@ import DragDropTasks from '../movetask/moveTask'
 import './taskViewer.style.css'
 
 const TaskViewer = () => {
-    const [ appState ] = useContext(AppStateContext)
+    const { stateAndDispatcher } = useContext(AppStateContext)
+    const [ appState ] = stateAndDispatcher
+    
     const indentLevel = (task) => {
         switch(task.level) {
             case 1:
