@@ -6,6 +6,8 @@ import TaskViewer from '../taskviewer/taskViewer'
 import DownloadFile from '../filedownload/fileDownload'
 import UploadFile from '../fileupload/fileUpload'
 import PageTitle from '../pagetitle/pageTitle'
+import StaticHeader from '../staticheaders/staticHeaders'
+import './homepage.style.css'
 
 
 const HomePage = () => {
@@ -13,14 +15,19 @@ const HomePage = () => {
     const [ appState ] = stateAndDispatcher
     console.log(appState);
     return (
-        <>
-        <LogOutButton/>
-        <PageTitle/>
-        <TaskViewer/>
-        <TaskAdder/>
-        <DownloadFile />
-        <UploadFile/>
-        </>
+        <div className='homepage-container'>
+            <div className='homepage-btns'>
+                <LogOutButton/>
+                <div className='file-action-btns'>
+                    <DownloadFile />
+                    <UploadFile/>
+                </div>
+            </div>
+            <PageTitle/>
+            <StaticHeader/>
+            <TaskViewer/>
+            <TaskAdder/>
+        </div>
     )
 }
 

@@ -18,22 +18,20 @@ function App() {
   }, [user])
 
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (user
-              ? (
-                <AppStateProvider>
-                  <HomePage />
-                </AppStateProvider>
-              ) : <LogInButton />)}
-          />
-        </Switch>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => (user
+            ? (
+              <AppStateProvider>
+                <HomePage />
+              </AppStateProvider>
+            ) : <LogInButton />)}
+        />
+      </Switch>
+    </BrowserRouter>
   )
 }
 

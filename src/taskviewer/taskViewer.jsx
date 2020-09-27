@@ -4,6 +4,8 @@ import LeftIndenter from '../leftindenter/leftIndenter'
 import RightIndenter from '../rightindenter/rightIndenter'
 import DeleteTask from '../deletetask/deleteTask'
 import DragDropTasks from '../movetask/moveTask'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExpandArrowsAlt } from '@fortawesome/free-solid-svg-icons'
 import './taskViewer.style.css'
 
 const TaskViewer = () => {
@@ -24,20 +26,27 @@ const TaskViewer = () => {
     }
 
     return (
-        <div>
+        <div className='task-view'>
             {appState.map((task, ind) => {
                 return (
-                    <div key={task.value}>
+                    <div className='task-controller' key={task.value}>
                         <DragDropTasks indPos={ind}>
-                            <LeftIndenter indPos={ind}/>
-                            <RightIndenter indPos={ind}/>
-                            <DeleteTask indPos={ind} />
-                            <div
-                                className={indentLevel(task)}
-                            >
+                            <div className='task-control-buttons'>
+                                <FontAwesomeIcon
+                                    className='arrow'
+                                    icon={faExpandArrowsAlt}
+                                    transform={{ rotate: 45 }}
+                                />
+                                <LeftIndenter indPos={ind}/>
+                                <RightIndenter indPos={ind}/>
+                                <DeleteTask indPos={ind} />
+                            </div>
+                            <div className={`${indentLevel(task)}`}>
+                                <div className='indent-positon'></div>
                                 <input
-                                value={task.value}
-                                disabled
+                                    className='taskName'
+                                    value={task.value}
+                                    disabled
                                 />
                             </div>
                         </DragDropTasks>

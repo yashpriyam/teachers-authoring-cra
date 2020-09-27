@@ -1,0 +1,25 @@
+.subjects-heading {
+  display: flex;
+  width: 100%;
+  border: 1px solid #e0dfdf;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  box-sizing: border-box;
+
+  .heading-wrapper {
+    .main-heading {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .sub-heading {
+      font-size: 12px;
+      color: #888;
+      font-weight: unset;
+    }
+    &:first-child {
+      width: 8em;
+    }
+  }
+}

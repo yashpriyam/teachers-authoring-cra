@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { AppStateContext } from '../appState/globalState.context'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExpandArrowsAlt } from '@fortawesome/free-solid-svg-icons'
+import './moveTask.style.css'
 
 const DragDropTasks = (props) => {
     const { children, indPos } = props
@@ -49,17 +48,12 @@ const DragDropTasks = (props) => {
     
     return (
         <div className='drag-drop' key={task.value} onDragOver={e => onDragOver(e)} onDrop={e => onDrop(e, task)}>
-            <hr></hr>
             <div
               className='task-container'
               onDragStart={e => onDragStart(e, task)}
               draggable
             >
-              <FontAwesomeIcon
-                className='arrow'
-                icon={faExpandArrowsAlt}
-                transform={{ rotate: 45 }}
-              />
+              
                 {children}
             </div>
         </div>
