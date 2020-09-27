@@ -7,13 +7,13 @@ const LogOutButton = () => {
   // const { photoURL, email, displayName } = auth
   return (
     <div className='sign-out-btn-container'>
-    <button
-      type="button"
-      className="sign-out-btn"
-      onClick={() => auth.signOut()}
-    >
-      SignOut
-    </button>
+      <button
+        type="button"
+        className="sign-out-btn"
+        onClick={() => auth.signOut()}
+      >
+        SignOut
+      </button>
     </div>
   )
 }

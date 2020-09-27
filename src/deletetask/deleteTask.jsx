@@ -25,12 +25,13 @@ const DeleteTask = (props) => {
       }
 
     return (
-        <div>
+        <div class="tooltip">
             <FontAwesomeIcon
                 className='arrow'
                 onClick={() => deleteTaskWithChildren()}
                 icon={faTrashAlt}
             />
+            <span class="tooltiptext">Delete</span>
         </div>
     )
 }

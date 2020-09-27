@@ -4,9 +4,11 @@ import "./login.style.css"
 
 const LogInButton = () => {
   return (
-    <button type="button" className="sign-in-btn" onClick={signInWithGoogle}>
-      Sign In With Google
-    </button>
+    <div className='sign-in-btn-container'>
+      <button type="button" className="sign-in-btn" onClick={signInWithGoogle}>
+        Sign In With Google
+      </button>
+    </div>
   )
 }
 
