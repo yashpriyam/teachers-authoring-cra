@@ -4,6 +4,7 @@ import "./logout.style.css"
 
 const LogOutButton = () => {
   return (
+    <>
     <button
       type="button"
       className="sign-out-btn"
@@ -11,6 +12,7 @@ const LogOutButton = () => {
     >
       SignOut
     </button>
+    </>
   )
 }
 
