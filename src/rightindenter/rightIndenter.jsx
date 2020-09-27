@@ -6,7 +6,9 @@ import './rightIndenter.style.css'
 
 const RightIndenter = (props) => {
     const { indPos } =  props
-    const [ appState, dispatch ] = useContext(AppStateContext)
+    const { stateAndDispatcher } = useContext(AppStateContext)
+    const [ appState, dispatch ] = stateAndDispatcher
+    
     let updatedState = [...appState]
 
     const indentRight = () => {

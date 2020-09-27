@@ -2,7 +2,9 @@ import React, { useState, useRef, useContext, useEffect } from 'react'
 import { AppStateContext } from '../appState/globalState.context'
 
 const TaskAdder = () => {
-    const [ appState, dispatch ] = useContext(AppStateContext)
+    const { stateAndDispatcher } = useContext(AppStateContext)
+    const [ appState, dispatch ] = stateAndDispatcher
+    
     const [ taskName, setTaskName ] = useState('')
     const [ task, setTask ] = useState({ value: '', level: ''})
     const taskInput = useRef();

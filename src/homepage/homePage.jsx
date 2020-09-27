@@ -5,15 +5,17 @@ import TaskAdder from '../taskadder/taskAdder'
 import TaskViewer from '../taskviewer/taskViewer'
 import DownloadFile from '../filedownload/fileDownload'
 import UploadFile from '../fileupload/fileUpload'
+import PageTitle from '../pagetitle/pageTitle'
 
 
 const HomePage = () => {
-    const [ appState, dispatch ] = useContext(AppStateContext)
+    const { stateAndDispatcher } = useContext(AppStateContext)
+    const [ appState ] = stateAndDispatcher
     console.log(appState);
     return (
         <>
         <LogOutButton/>
-        <button type='button' onClick={() => dispatch({ type: 'inc', value: [676] })}>Click to update the state</button>
+        <PageTitle/>
         <TaskViewer/>
         <TaskAdder/>
         <DownloadFile />

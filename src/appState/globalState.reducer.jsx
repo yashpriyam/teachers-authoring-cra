@@ -1,6 +1,13 @@
 export const appState = []
+export const pageTitle = ''
+export const pageTitleReducer = (state, action) => {
+    state = action
+    return state
+}
+
 
 export const reducer = (state, action) => {
+    console.log(state);
     switch (action.type) {
         case 'inc':
             state = action.value

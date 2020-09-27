@@ -5,7 +5,9 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 const DeleteTask = (props) => {
     const { indPos } =  props
-    const [ appState, dispatch ] = useContext(AppStateContext)
+    const { stateAndDispatcher } = useContext(AppStateContext)
+    const [ appState, dispatch ] = stateAndDispatcher
+    
     let updatedState = [...appState]
 
     const deleteTaskWithChildren = () => {
