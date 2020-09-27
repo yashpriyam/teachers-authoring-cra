@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { AppStateContext } from '../appState/globalState.context'
 import LogOutButton from '../user/logoutButton'
 import TaskAdder from '../taskadder/taskAdder'
+import TaskViewer from '../taskviewer/taskViewer'
 
 
 const HomePage = () => {
@@ -11,6 +12,7 @@ const HomePage = () => {
         <>
         <LogOutButton/>
         <button type='button' onClick={() => dispatch({ type: 'inc', value: [676] })}>Click to update the state</button>
+        <TaskViewer/>
         <TaskAdder/>
         </>
     )

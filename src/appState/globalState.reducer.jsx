@@ -8,6 +8,12 @@ export const reducer = (state, action) => {
         case 'addTaskObject':
             state = action.value
             return state
+        case 'indentLeft':
+            state = action.value
+            return state
+        case 'indentRight':
+            state = action.value
+            return state
         default:
             console.log('some error occurred')
     }
