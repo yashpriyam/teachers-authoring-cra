@@ -20,6 +20,9 @@ export const reducer = (state, action) => {
         case 'moveTask':
             state = action.value
             return state
+        case 'jsonFileData':
+            state = action.value
+            return state
         default:
             console.log('some error occurred')
     }
