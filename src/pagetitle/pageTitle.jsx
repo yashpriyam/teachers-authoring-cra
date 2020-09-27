@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from "react"
 import { AppStateContext } from "../appState/globalState.context"
-
+import './pageTitle.style.css'
 const PageTitle = () => {
     const { pageTitleDispatcher } = useContext(AppStateContext)
     const [ pageTitle, dispatch ] = pageTitleDispatcher
@@ -24,12 +24,14 @@ const PageTitle = () => {
     return (
         <div onClick={titleEditable}>
             <input
+                className='pagetitle'
                 ref={pageTitleRef}
                 type='text'
                 name='title'
-                value={pageTitle}
+                value={pageTitle.toUpperCase()}
                 onChange={onTitleChange} 
                 disabled
+                placeholder='Add subject name'
             />
         </div>
     )

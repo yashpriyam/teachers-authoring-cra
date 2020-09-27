@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from "react"
 import { AppStateContext } from "../appState/globalState.context"
-
+import './fileUpload.style.css'
 const UploadFile = () => {
   const { stateAndDispatcher, pageTitleDispatcher } = useContext(AppStateContext)
   const [appState, dispatch] = stateAndDispatcher
@@ -22,8 +22,8 @@ const UploadFile = () => {
     }
   }
   return (
-    <div>
-      <input ref={fileInputRef} type="file" onChange={handleFileUpload} />
+    <div className='fileupload-container'>
+      <input className='fileupload' ref={fileInputRef} type="file" onChange={handleFileUpload} />
     </div>
   )
 }

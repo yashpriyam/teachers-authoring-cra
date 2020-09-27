@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { AppStateContext } from '../appState/globalState.context'
-
+import './fileDownload.style.css'
 
 const DownloadFile = () => {
     
@@ -23,8 +23,9 @@ const DownloadFile = () => {
         return document.body.removeChild(link);
     }
     return (
-        <div>
+        <div className='downloadFile-container'>
             <button
+                className='downloadFile'
                 type='button'
                 onClick={() => downloadFile()}>
                     DOWNLOAD FILE

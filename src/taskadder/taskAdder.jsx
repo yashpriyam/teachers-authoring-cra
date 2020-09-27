@@ -1,5 +1,7 @@
 import React, { useState, useRef, useContext, useEffect } from 'react'
 import { AppStateContext } from '../appState/globalState.context'
+import './taskAdder.style.css'
+
 
 const TaskAdder = () => {
     const { stateAndDispatcher } = useContext(AppStateContext)
@@ -32,11 +34,11 @@ const TaskAdder = () => {
     }
     
     return (
-        <div>
+        <div className='taskadder-container'>
             <div>
-                <input name='task' type='text' ref={taskInput} onChange={onChangeForTaskInput} value={taskName} placeholder='Add standard here'/>
+                <input className='taskAdder' name='task' type='text' ref={taskInput} onChange={onChangeForTaskInput} value={taskName} placeholder='Add standard here'/>
             </div>
-            <button type='button' onClick={() => addTaskHandler()}>ADD STANDARD</button>
+            <button className='addStandard' type='button' onClick={() => addTaskHandler()}>Add a standard</button>
         </div>
     )
 }

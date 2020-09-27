@@ -1,0 +1,12 @@
+.task-container {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid #e0dfdf;
+    /* padding: 0.5em 0.5em 0.5em 0.5em; */
+    border-right: none;
+    border-left: none;
+    box-sizing: border-box;
+    
+  }
