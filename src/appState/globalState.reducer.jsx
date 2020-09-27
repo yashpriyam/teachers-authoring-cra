@@ -14,6 +14,9 @@ export const reducer = (state, action) => {
         case 'indentRight':
             state = action.value
             return state
+        case 'deleteTask':
+            state = action.value
+            return state
         default:
             console.log('some error occurred')
     }

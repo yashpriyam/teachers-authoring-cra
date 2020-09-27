@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { AppStateContext } from '../appState/globalState.context'
 import LeftIndenter from '../leftindenter/leftIndenter'
 import RightIndenter from '../rightindenter/rightIndenter'
+import DeleteTask from '../deletetask/deleteTask'
 import './taskViewer.style.css'
 
 const TaskViewer = () => {
@@ -25,6 +26,7 @@ const TaskViewer = () => {
                     <div key={task.value}>
                         <LeftIndenter indPos={ind}/>
                         <RightIndenter indPos={ind}/>
+                        <DeleteTask indPos={ind} />
                         <div
                             className={indentLevel(task)}
                         >
