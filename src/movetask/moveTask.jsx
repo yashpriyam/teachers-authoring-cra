@@ -52,8 +52,7 @@ const DragDropTasks = (props) => {
               className='task-container'
               onDragStart={e => onDragStart(e, task)}
               draggable
-            >
-              
+            > 
                 {children}
             </div>
         </div>

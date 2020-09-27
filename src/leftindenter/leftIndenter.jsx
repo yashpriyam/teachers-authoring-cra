@@ -19,12 +19,13 @@ const LeftIndenter = (props) => {
       }
       
     return (
-        <div>
+        <div class="tooltip">
             <FontAwesomeIcon
                 className='arrow'
                 onClick={() => indentLeft()}
                 icon={faArrowLeft}
             />
+            <span class="tooltiptext">Move Left</span>
         </div>
     )
 }

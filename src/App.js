@@ -4,7 +4,6 @@ import LogInButton from "./user/loginButton"
 import { AppStateProvider } from './appState/globalState.context'
 import HomePage from './homepage/homePage'
 import { auth } from "./firebase/firebase.utils"
-
 import "./App.css"
 
 function App() {
@@ -28,7 +27,9 @@ function App() {
               <AppStateProvider>
                 <HomePage />
               </AppStateProvider>
-            ) : <LogInButton />)}
+            ) : <div className='login-page'>
+              <LogInButton />
+            </div>)}
         />
       </Switch>
     </BrowserRouter>
