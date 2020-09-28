@@ -30,6 +30,9 @@ export const reducer = (state, action) => {
         case 'jsonFileData':
             state = action.value
             return state
+        case 'deleteAll':
+                state = action.value
+                return state
         default:
             console.log('some error occurred')
     }

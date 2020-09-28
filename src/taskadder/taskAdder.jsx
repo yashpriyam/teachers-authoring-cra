@@ -1,5 +1,6 @@
 import React, { useState, useRef, useContext, useEffect } from 'react'
 import { AppStateContext } from '../appState/globalState.context'
+import { v4 as uuidv4 } from 'uuid';
 import './taskAdder.style.css'
 
 
@@ -8,7 +9,7 @@ const TaskAdder = () => {
     const [ appState, dispatch ] = stateAndDispatcher
     
     const [ taskName, setTaskName ] = useState('')
-    const [ task, setTask ] = useState({ value: '', level: ''})
+    const [ task, setTask ] = useState({ value: '', level: '', id: ''})
     const taskInput = useRef();
 
     let updatedState = [...appState] //for forcing state update
@@ -28,6 +29,7 @@ const TaskAdder = () => {
 
     const addTaskHandler = () => {
         if (taskName === '') return;
+        task.id = uuidv4()
         updatedState.push(task)
         dispatch({ type: 'addTaskObject', value: updatedState })
         setTaskName('')

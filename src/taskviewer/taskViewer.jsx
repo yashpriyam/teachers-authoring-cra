@@ -7,10 +7,12 @@ import DragDropTasks from '../movetask/moveTask'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExpandArrowsAlt } from '@fortawesome/free-solid-svg-icons'
 import './taskViewer.style.css'
+import { useState } from 'react'
 
 const TaskViewer = () => {
     const { stateAndDispatcher } = useContext(AppStateContext)
     const [ appState ] = stateAndDispatcher
+    const [ taskSearchField, setTaskSearchField ] = useState('')
     
     const indentLevel = (task) => {
         switch(task.level) {
@@ -25,11 +27,25 @@ const TaskViewer = () => {
         }
     }
 
+
+    const filteredTasks = appState.filter(taskObj =>
+        taskObj.value.toLowerCase().includes(taskSearchField.toLowerCase())
+    )
+
+    const onSearchFieldChange = (e) => {
+        setTaskSearchField(e.target.value)
+    }
+
+
     return (
+        <>
+        <div className='search-container'>
+            <input className='search-box' type='text' onChange={onSearchFieldChange} placeholder='Search here'/>
+        </div>
         <div className='task-view'>
-            {appState.map((task, ind) => {
+            {filteredTasks.map((task, ind) => {
                 return (
-                    <div className='task-controller' key={task.value}>
+                    <div className='task-controller' key={task.id}>
                         <DragDropTasks indPos={ind}>
                             <div className='task-control-buttons'>
                                 <FontAwesomeIcon
@@ -46,7 +62,7 @@ const TaskViewer = () => {
                                 <input
                                     className='taskName'
                                     value={task.value}
-                                    disabled
+                                    onChange={() => {}}
                                 />
                             </div>
                         </DragDropTasks>
@@ -54,6 +70,7 @@ const TaskViewer = () => {
                 )
             })}
         </div>
+        </>
     )
 }
 
