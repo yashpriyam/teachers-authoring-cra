@@ -11,7 +11,7 @@ const DragDropTasks = (props) => {
     let task = updatedState[indPos]
 
     const onDragStart = (e, taskObj) => {
-        e.dataTransfer.setData("taskObj", taskObj.value)
+        e.dataTransfer.setData("taskObj", taskObj.id)
     }
 
     const onDragOver = (e) => {
@@ -19,14 +19,14 @@ const DragDropTasks = (props) => {
     }
 
     const onDrop = (e, landingTask) => {
-        const draggedTaskName = e.dataTransfer.getData("taskObj")
+        const draggedTaskId = e.dataTransfer.getData("taskObj")
         const tempTaskList = updatedState;
         updatedState.map((taskObj, i) => {
-            if (taskObj.value === draggedTaskName) {
+            if (taskObj.id === draggedTaskId) {
                 let splicingIndex = 1;
                 if (i === tempTaskList.length - 1) { //last element, no children
                 const hangingTask = tempTaskList.pop()
-                const landingTaskIndex = tempTaskList.findIndex(onetask => onetask.value === landingTask.value)
+                const landingTaskIndex = tempTaskList.findIndex(onetask => onetask.id === landingTask.id)
                 tempTaskList.splice(landingTaskIndex, 0, hangingTask)
                 } else {
                 for (let pos = i + 1; pos < tempTaskList.length; pos += 1) {
@@ -37,7 +37,7 @@ const DragDropTasks = (props) => {
                     break;
                 }
                 const hangingTasksArray = tempTaskList.splice(i, splicingIndex)
-                const landingTaskIndex = tempTaskList.findIndex(onetask => onetask.value === landingTask.value)
+                const landingTaskIndex = tempTaskList.findIndex(onetask => onetask.id === landingTask.id)
                 tempTaskList.splice(landingTaskIndex, 0, ...hangingTasksArray)
                 }
             }
@@ -47,7 +47,7 @@ const DragDropTasks = (props) => {
     
     
     return (
-        <div className='drag-drop' key={task.value} onDragOver={e => onDragOver(e)} onDrop={e => onDrop(e, task)}>
+        <div className='drag-drop' key={task.id} onDragOver={e => onDragOver(e)} onDrop={e => onDrop(e, task)}>
             <div
               className='task-container'
               onDragStart={e => onDragStart(e, task)}

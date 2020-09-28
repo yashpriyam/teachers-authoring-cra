@@ -6,23 +6,18 @@ const PageTitle = () => {
     const [ pageTitle, dispatch ] = pageTitleDispatcher
     const pageTitleRef = useRef()
 
-    const disableInput = () => pageTitleRef.current.disabled = true
+    const titleInEditable = () => pageTitleRef.current.disabled = true
     
-    let inputTimer;
     const titleEditable = () => {
         pageTitleRef.current.disabled = false
-        clearTimeout(inputTimer)
-        inputTimer = setTimeout(disableInput, 4000)
     }
 
     const onTitleChange = (e) => {
         dispatch(e.target.value)
-        clearTimeout(inputTimer)
-        inputTimer = setTimeout(() => disableInput(), 4000)
     }
 
     return (
-        <div onClick={titleEditable}>
+        <div onClick={titleEditable} onBlur={titleInEditable}>
             <input
                 className='pagetitle'
                 ref={pageTitleRef}

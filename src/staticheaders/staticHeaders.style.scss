@@ -7,6 +7,9 @@
   border-left: none;
   border-bottom: none;
   box-sizing: border-box;
+  
+
+  
 
   .heading-wrapper {
     .main-heading {
@@ -22,4 +25,13 @@
       width: 8em;
     }
   }
+}
+.head-container{
+  display: flex;
+  align-items: center;
+}
+
+.delete-all-container {
+  display: flex;
+  align-items: flex-end;
 }
