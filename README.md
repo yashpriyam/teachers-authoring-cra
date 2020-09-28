@@ -4,7 +4,7 @@ It is a tool which allows educators to create a learn journey or a lesson plan f
 
 ## Live Tool
 
-[authoring tool live]: <https://toddle-tool.netlify.app/>
+[authoring tool live](https://toddle-tool.netlify.app/)
 
 ## Project Demo
 
