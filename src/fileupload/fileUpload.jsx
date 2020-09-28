@@ -18,11 +18,12 @@ const UploadFile = () => {
     fileReader.readAsText(e.target.files[0], "UTF-8")
     fileReader.onload = (ev) => {
       updatedState = JSON.parse(ev.target.result)
-      updatedState.map(taskObj => {
+      updatedState.forEach(taskObj => {
         if (taskObj.id === undefined) {
           taskObj.id = uuidv4()
         }
       })
+      console.log(updatedState);
       dispatch({ type: "jsonFileData", value: updatedState })
       fileInputRef.current.value = ''
     }
