@@ -1,6 +1,6 @@
 # Curriculum Authoring Tool
 
-It is a tool which allows educators to create a learn journey or a lesson plan for a subject, chapter or a topic.
+It is a tool which allows educators to create a an ordered learn journey or a lesson plan for a subject, chapter or a topic.
 
 ## Live Tool
 
@@ -17,21 +17,6 @@ It is a tool which allows educators to create a learn journey or a lesson plan f
 ### GIFs can't be paused, so if you want to pause and read through the code flow,
 
 ### here is the [YOUTUBE LINK FOR APP STRUCTURE FLOW](https://youtu.be/rzCp5etJPqE), wihtout audio
-
-```
-1. Chapter 1
-   - SubTopic 1
-     - Concept 1
-     - Concept 2
-     - Concept 3
-   - SubTopic 2
-     - Concept 1
-     - Concept 2
-2. Chapter 2
-   - SubTopic 1
-     - Concept 1
-     - Concept 2
-```
 
 Currently the tool supports 3 levels of nesting or parent-child relationship.
 
@@ -85,7 +70,7 @@ Currently the tool supports 3 levels of nesting or parent-child relationship.
 
 The application uses es6.
 
-```sh
+```
 $ git clone https://github.com/yashpriyam/teachers-authoring-cra.git
 $ npm install
 $ npm start
