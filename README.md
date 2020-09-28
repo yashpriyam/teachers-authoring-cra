@@ -11,6 +11,16 @@ It is a tool which allows educators to create a learn journey or a lesson plan f
 ![](authoring-tool-toddle.gif)
 
 ```
+
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" poster="curriculum-auth-tool/src/backgroundimage.jpg">
+    <source src="AuthoringToolToddle.mp4" type="video/mp4">
+  </video>
+</figure>
+
+```
+
+```
 1. Chapter 1
    - SubTopic 1
      - Concept 1
