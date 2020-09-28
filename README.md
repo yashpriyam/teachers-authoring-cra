@@ -16,7 +16,7 @@ It is a tool which allows educators to create a an ordered learn journey or a le
 
 ### GIFs can't be paused, so if you want to pause and read through the code flow,
 
-### here is the [YOUTUBE LINK FOR APP STRUCTURE FLOW](https://youtu.be/rzCp5etJPqE), wihtout audio
+### here is the [YOUTUBE LINK FOR APP STRUCTURE FLOW](https://youtu.be/rzCp5etJPqE), without audio
 
 Currently the tool supports 3 levels of nesting or parent-child relationship.
 
