@@ -2,6 +2,10 @@
 
 It is a tool which allows educators to create a learn journey or a lesson plan for a subject, chapter or a topic.
 
+## Live Tool
+
+[authoring tool live]: https://toddle-tool.netlify.app/
+
 ## Project Demo
 
 ![](authoring-tool-toddle.gif)
@@ -25,17 +29,20 @@ Currently the tool supports 3 levels of nesting or parent-child relationship.
 
 ## Features
 
-- [x] Row actions - Indent/ Outdent/ Delete
-- [x] Preserve parent-child relations between nodes while deleting intending etc.
-      Eg. deleting an element should also delete its children
-- [x] The text in each row should be editable like a text box
-- [x] Load/ Save - Functionality to generate and download a JSON output and
-      to load the JSON to create the structure again
-- [x] No backend used
-- [x] UI features Eg. tooltips
-- [x] UI Validations Eg. reaching highest or lowest indent, parent child relation
+- [x] Indent - Outdent: For creating or removing parent child relations between tasks
+- [x] Delete Task: For removing tasks
+- [x] Deleting tasks deletes all the child elements of the tasks, if any
+- [x] Delete All Task: For removing all tasks at once.
+- [x] Moving Task: Drag and Drop tasks, change their positions
+- [x] Moving Tasks with children: Tasks, having children, are dragged and moved with children
+- [x] Page Title: Declare title of the page on top. This title becomes file name of the downloaded json file.
+      This title is set as file name of uploaded file automatically.
+- [x] Upload/ Download - Downloads the json format of the strucutre with all the parent child relations preserved
+      Upload a json file in the correct format to get the structure built on the UI with all the parent child relations
+- [x] Tooltip: on hovering the control buttons, tooltip pop up
+- [x] Search bar: text based search box for searching through task values
 
-## Features which are WIP:
+## Features which are in-developement:
 
 - Inline Editing option for every saved item
 - Action buttons control when searched list is in display
@@ -57,33 +64,20 @@ Currently the tool supports 3 levels of nesting or parent-child relationship.
 ]
 ```
 
-## Build with
+## Libraries and Frameworks used
 
-This section should list any major frameworks that you built your project using.
+- React.js (with Eslint, Prettier and Husky)
+- Firebase for google authetication
+- node-sass
+- Fontawesome Icons
+- uuidv4
 
-- [React.js]
-- [node-sass]
+## Liked the tool want to contribute? For getting started with the codebase:
 
-## Installation
-
-Curriculam Authoring Tool requires [Node.js](https://nodejs.org/) v12+ to run.
-Install the dependencies after cloning the repo and start the server.
+The application uses es6.
 
 ```sh
-$ git clone https://github.com/salil0001/curriculum-authoring-tool.git
-$ yarn install
-$ yarn start
+$ git clone https://github.com/yashpriyam/teachers-authoring-cra.git
+$ npm install
+$ npm start
 ```
-
-## Contributions
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Clone the Project
-2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
-3. Commit your Changes (git commit -m 'Add some AmazingFeature')
-4. Push to the Branch (git push origin feature/AmazingFeature)
-5. Open a Pull Request
-   [React.js]: <https://reactjs.org/>
-   [node-sass]:<https://www.npmjs.com/package/node-sass/>
-   [Deployment-Link]:<https://www.npmjs.com/package/>
