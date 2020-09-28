@@ -1,68 +1,78 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Curriculum Authoring Tool 
+It is a tool which allows educators to create a learn journey or a lesson plan for a subject, chapter or a topic.
 
-## Available Scripts
+## Project Demo
+![](authoring-tool-toddle.gif)
 
-In the project directory, you can run:
 
-### `npm start`
+```
+1. Chapter 1 
+   - SubTopic 1
+     - Concept 1
+     - Concept 2
+     - Concept 3
+   - SubTopic 2
+     - Concept 1
+     - Concept 2
+2. Chapter 2 
+   - SubTopic 1
+     - Concept 1
+     - Concept 2
+```
+Currently the tool supports 3 levels of nesting or parent-child relationship.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
+ - [x] Row actions - Indent/ Outdent/ Delete 
+ - [x] Preserve parent-child relations between nodes while deleting intending etc.
+   Eg. deleting an element should also delete its children
+ - [x] The text in each row should be editable like a text box
+ - [x] Load/ Save - Functionality to generate and download a JSON output and
+    to load the JSON to create the structure again   
+ - [x] No backend used
+ - [x] UI features Eg. tooltips
+ - [x] UI Validations Eg. reaching highest or lowest indent, parent child relation 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Features which are in-developement:
+-  Inline Editing option for every saved item
+-  Action buttons control when searched list is in display
+-  Test cases
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## The tool allows DOWNLOADING the content with order preserved in a JSON format. A typical downloaded json would look like:
+```
+[
+    {"value":"Shapes","level":1,"id":"23409d84-363d-4c90-a42d-d6ea0ddea340"},
+    {"value":"Lines","level":2,"id":"be43eb8f-a976-476f-96f5-8ca71886b8d8"},
+    {"value":"Triangles","level":2,"id":"7f9579ea-e4c4-4b66-8d98-62c695084a1c"},
+    {"value":"Circles","level":2,"id":"23cf4811-e62e-402f-9db2-96d68102cb1c"},
+    {"value":"Polynomials","level":1,"id":"402b041d-4eae-4b25-91b7-bdef574fd822"},
+    {"value":"Numbers","level":1,"id":"3d8f358c-8bb8-4e87-883c-025bb2b81fb1"},
+    {"value":"Fractions","level":2,"id":"1c24669c-5b73-4501-aa67-5399b98cabdb"},
+    {"value":"Integers","level":2,"id":"f244e7bb-2c2c-4687-97b8-8aa31c0e47a0"},
+    {"value":"RealNumbers","level":2,"id":"4486ec9b-9979-4510-81ff-177e9bb37b70"}
+]
+```
+## Libraries and Frameworks used
+- React.js (with Eslint, Prettier and Husky)
+- Firebase for google authetication
+- node-sass
+- Fontawesome Icons
+- uuidv4
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Getting started with the codebase:
+The application uses es6.
+```sh
+$ git clone https://github.com/salil0001/curriculum-authoring-tool.git
+$ yarn install 
+$ yarn start
+```
+## Contributions
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+1. Clone the Project
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+3. Commit your Changes (git commit -m 'Add some AmazingFeature')
+4. Push to the Branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
+   [React.js]: <https://reactjs.org/>
+   [node-sass]:<https://www.npmjs.com/package/node-sass/>
+   [Deployment-Link]:<https://www.npmjs.com/package/>
