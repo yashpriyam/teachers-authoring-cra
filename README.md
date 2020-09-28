@@ -10,15 +10,13 @@ It is a tool which allows educators to create a learn journey or a lesson plan f
 
 ![](authoring-tool-toddle.gif)
 
-```
+## App Structure Flow
 
-<figure class="video_container">
-  <video controls="true" allowfullscreen="true" poster="curriculum-auth-tool/src/backgroundimage.jpg">
-    <source src="AuthoringToolToddle.mp4" type="video/mp4">
-  </video>
-</figure>
+![](app-structure-flow.gif)
 
-```
+### GIFs can't be paused, so if you want to pause and read through the code flow,
+
+### here is the [YOUTUBE LINK FOR APP STRUCTURE FLOW](https://youtu.be/rzCp5etJPqE), wihtout audio
 
 ```
 1. Chapter 1
