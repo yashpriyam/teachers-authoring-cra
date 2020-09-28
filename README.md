@@ -29,6 +29,7 @@ Currently the tool supports 3 levels of nesting or parent-child relationship.
 
 ## Features
 
+- [x] **Sign In - Sign out:** For users to start with tool, users need to Sign in to application using their google id.
 - [x] **Indent - Outdent:** For creating or removing parent child relations between tasks
 - [x] **Delete Task:** For removing tasks
 - [x] Deleting tasks deletes all the child elements of the tasks, if any
