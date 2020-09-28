@@ -22,19 +22,19 @@ Currently the tool supports 3 levels of nesting or parent-child relationship.
 
 ## Features
 
-- [x] **Sign In - Sign out:** For users to start with tool, users need to Sign in to application using their google id.
-- [x] **Indent - Outdent:** For creating or removing parent child relations between tasks
-- [x] **Delete Task:** For removing tasks
-- [x] Deleting tasks deletes all the child elements of the tasks, if any
+- [x] **Sign In - Sign out:** For users to start with the tool, they need to Sign in to the application using their google id.
+- [x] **Indent - Outdent:** For creating or removing parent child relations between tasks.
+- [x] **Delete Task:** For removing individual tasks at any level.
+- [x] Deleting tasks deletes all the child elements of the tasks, if any.
 - [x] **Delete All** Task: For removing all tasks at once.
-- [x] **Moving Task:** Drag and Drop tasks, change their positions
-- [x] Moving Tasks with children: Tasks, having children, are dragged and moved with children
-- [x] **Page Title:** Declare title of the page on top. This title becomes file name of the downloaded json file.
-      This title is set as file name of uploaded file automatically.
-- [x] **Upload/ Download** - Downloads the json format of the strucutre with all the parent child relations preserved
-      Upload a json file in the correct format to get the structure built on the UI with all the parent child relations
-- [x] **Tooltip:** on hovering the control buttons, tooltip pop up
-- [x] **Search bar:** text based search box for searching through task values
+- [x] **Moving Task:** Drag and Drop tasks, change their positions along with their children, if any.
+- [x] Moving Tasks with children: Tasks, having children, are dragged and moved with their children.
+- [x] **Page Title:** Declare title of the page on the top. This title becomes file name of the downloaded json file.
+      This title is also set as per the file name of the uploaded file automatically.
+- [x] **Upload/ Download** - Downloads the json format of the strucutre with all the parent child relations preserved.
+      Upload a json file in the correct format to get the structure built on the UI with all the parent child relations.
+- [x] **Tooltip:** on hovering the control buttons, a tooltip pops up stating the action that they control.
+- [x] **Search bar:** text based search box for searching through task values.
 
 ## Features which are in-developement:
 
@@ -66,7 +66,7 @@ Currently the tool supports 3 levels of nesting or parent-child relationship.
 - Fontawesome Icons
 - uuidv4
 
-## Liked the tool want to contribute? For getting started with the codebase:
+## Liked the tool? Want to contribute? For getting started with the codebase:
 
 The application uses es6.
 
