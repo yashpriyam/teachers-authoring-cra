@@ -10,6 +10,14 @@ It is a tool which allows educators to create a learn journey or a lesson plan f
 
 ![](authoring-tool-toddle.gif)
 
+## App Structure Flow
+
+![](app-structure-flow.gif)
+
+### GIFs can't be paused, so if you want to pause and read through the code flow,
+
+### here is the [YOUTUBE LINK FOR APP STRUCTURE FLOW](https://youtu.be/rzCp5etJPqE), wihtout audio
+
 ```
 1. Chapter 1
    - SubTopic 1
