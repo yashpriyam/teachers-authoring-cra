@@ -29,18 +29,18 @@ Currently the tool supports 3 levels of nesting or parent-child relationship.
 
 ## Features
 
-- [x] Indent - Outdent: For creating or removing parent child relations between tasks
-- [x] Delete Task: For removing tasks
+- [x] **Indent - Outdent:** For creating or removing parent child relations between tasks
+- [x] **Delete Task:** For removing tasks
 - [x] Deleting tasks deletes all the child elements of the tasks, if any
-- [x] Delete All Task: For removing all tasks at once.
-- [x] Moving Task: Drag and Drop tasks, change their positions
+- [x] **Delete All** Task: For removing all tasks at once.
+- [x] **Moving Task:** Drag and Drop tasks, change their positions
 - [x] Moving Tasks with children: Tasks, having children, are dragged and moved with children
-- [x] Page Title: Declare title of the page on top. This title becomes file name of the downloaded json file.
+- [x] **Page Title:** Declare title of the page on top. This title becomes file name of the downloaded json file.
       This title is set as file name of uploaded file automatically.
-- [x] Upload/ Download - Downloads the json format of the strucutre with all the parent child relations preserved
+- [x] **Upload/ Download** - Downloads the json format of the strucutre with all the parent child relations preserved
       Upload a json file in the correct format to get the structure built on the UI with all the parent child relations
-- [x] Tooltip: on hovering the control buttons, tooltip pop up
-- [x] Search bar: text based search box for searching through task values
+- [x] **Tooltip:** on hovering the control buttons, tooltip pop up
+- [x] **Search bar:** text based search box for searching through task values
 
 ## Features which are in-developement:
 
