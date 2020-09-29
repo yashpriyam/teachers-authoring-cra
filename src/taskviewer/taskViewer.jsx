@@ -11,8 +11,9 @@ import { useState } from 'react'
 
 const TaskViewer = () => {
     const { stateAndDispatcher } = useContext(AppStateContext)
-    const [ appState ] = stateAndDispatcher
+    const [ appState, dispatch ] = stateAndDispatcher
     const [ taskSearchField, setTaskSearchField ] = useState('')
+    let updatedState = [...appState]
     
     const indentLevel = (task) => {
         switch(task.level) {
@@ -34,6 +35,11 @@ const TaskViewer = () => {
 
     const onSearchFieldChange = (e) => {
         setTaskSearchField(e.target.value)
+    }
+
+    const onTaskChange = (e, editedTaskIndex) => {
+        updatedState[editedTaskIndex].value = e.target.value
+        dispatch({ type: 'editTask', value: updatedState })
     }
 
 
@@ -62,7 +68,7 @@ const TaskViewer = () => {
                                 <input
                                     className='taskName'
                                     value={task.value}
-                                    onChange={() => {}}
+                                    onChange={(e) => onTaskChange(e, ind)}
                                 />
                             </div>
                         </DragDropTasks>
