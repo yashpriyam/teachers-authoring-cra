@@ -29,6 +29,7 @@ Currently the tool supports 3 levels of nesting or parent-child relationship.
 - [x] **Delete All** Task: For removing all tasks at once.
 - [x] **Moving Task:** Drag and Drop tasks, change their positions along with their children, if any.
 - [x] Moving Tasks with children: Tasks, having children, are dragged and moved with their children.
+- [x] **In-line Task Edit:** For editing saved tasks at any level.
 - [x] **Page Title:** Declare title of the page on the top. This title becomes file name of the downloaded json file.
       This title is also set as per the file name of the uploaded file automatically.
 - [x] **Upload/ Download** - Downloads the json format of the strucutre with all the parent child relations preserved.
