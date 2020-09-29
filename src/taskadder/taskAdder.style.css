@@ -12,6 +12,7 @@
   font-weight: bold;
   font-size: large;
   align-items: center;
+  outline: 0;
 }
 
 .taskAdder:focus {
