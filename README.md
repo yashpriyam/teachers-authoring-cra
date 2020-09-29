@@ -39,7 +39,6 @@ Currently the tool supports 3 levels of nesting or parent-child relationship.
 
 ## Features which are in-developement:
 
-- Inline Editing option for every saved item
 - Action buttons control when searched list is in display
 - Test cases
 
