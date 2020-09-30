@@ -29,7 +29,8 @@ const UploadFile = () => {
     }
   }
   return (
-    <div className='fileupload-container'>
+    <div className='fileupload-container' onClick={() => fileInputRef.current.click()}>
+      <div className='upload-btn-text'>UPLOAD FILE</div>
       <input className='fileupload' ref={fileInputRef} type="file" onChange={handleFileUpload} />
     </div>
   )
