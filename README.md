@@ -2,6 +2,8 @@
 
 It is a tool which allows educators to create a an ordered learn journey or a lesson plan for a subject, chapter or a topic.
 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=yashpriyam&repo=teachers-authoring-cra)](https://github.com/anuraghazra/github-readme-stats)
+
 ## Live Tool
 
 **[Authoring Tool Live](https://toddle-tool.netlify.app/)**
