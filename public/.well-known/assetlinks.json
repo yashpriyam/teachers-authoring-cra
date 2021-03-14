@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.netlify.toddle_tool.twa",
+      "sha256_cert_fingerprints": [
+        "EB:10:60:3A:44:93:43:9C:B9:2C:11:6E:E8:4A:98:A8:65:4D:49:28:1C:3A:4B:37:BF:9B:D5:20:3B:FD:D2:42"
+      ]
+    }
+  }
+]
