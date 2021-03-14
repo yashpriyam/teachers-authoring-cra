@@ -1,8 +1,32 @@
 .login-page {
-    background-image: url("./backgroundimage.jpg");
-    background-color: #cccccc;
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("./backgroundimage.jpg");
+  background-color: #cccccc;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1360px) {
+  body {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    max-width: 680px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    max-width: 480px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    max-width: 320px;
+  }
 }
